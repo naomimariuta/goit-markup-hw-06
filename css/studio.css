@@ -1,0 +1,339 @@
+@import url("./style.css");
+
+.section-one {
+	background: url("../images/Dark-bg.png") no-repeat center, url("../images/people-office.png") no-repeat center;
+	height: 600px;
+	display: flex;
+	justify-content: center;
+}
+
+.hero-section {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	gap: 48px;
+}
+
+.hero-section h1 {
+	width: 496px;
+	height: 120px;
+	font-weight: 700;
+	font-size: 56px;
+	line-height: 1.07143;
+	letter-spacing: 0.02em;
+	text-align: center;
+	color: var(--white);
+}
+
+.hero-section button {
+	width: 169px;
+	height: 56px;
+	padding: 16px 32px;
+	background: var(--iris);
+	border: 0;
+	border-radius: 4px;
+	font-weight: 500;
+	font-size: 16px;
+	line-height: 1.5;
+	letter-spacing: 0.04em;
+	color: var(--white);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.section-list {
+	display: flex;
+	justify-content: space-between;
+}
+
+.section-list-item h3 {
+	font-weight: 500;
+	font-size: 20px;
+	line-height: 1.2;
+	letter-spacing: 0.02em;
+}
+
+.section-list-item p {
+	font-size: 16px;
+	line-height: 1.5;
+	letter-spacing: 0.02em;
+	color: var(--slate);
+}
+
+.section-list-item {
+	width: 264px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.section-style {
+	display: flex;
+	flex-direction: column;
+	gap: 72px;
+}
+
+.section-style h2 {
+	font-weight: 700;
+	font-size: 36px;
+	line-height: 1.11111;
+	letter-spacing: 0.02em;
+	text-transform: capitalize;
+	text-align: center;
+}
+
+.our-team-section {
+	background: var(--cloud);
+}
+
+.card {
+	border-radius: 0 0 4px 4px;
+	box-shadow: 0 2px 1px 0 rgba(46, 47, 66, 0.08), 0 1px 1px 0 rgba(46, 47, 66, 0.16), 0 1px 6px 0 rgba(46, 47, 66, 0.08);
+	background: var(--white);
+	display: flex;
+	flex-direction: column;
+	gap: 32px;
+}
+
+.card-content {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	gap: 8px;
+	margin-bottom: 32px;
+}
+
+.social-icon,
+.icon-client {
+	color: var(--light-slate);
+}
+
+.icon-client {
+	width: 104px;
+	height: 56px;
+	transition: color var(--transition);
+}
+
+.icon-client:hover,
+.icon-client:active {
+	color: var(--iris);
+}
+
+.icon-client-background {
+	width: 168px;
+	height: 88px;
+	background: var(--white);
+	border: 1px solid var(--light-slate);
+	border-radius: 4px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	transition: border var(--transition);
+}
+
+.icon-client-background:hover,
+.icon-client-background:active {
+	border: 1px solid var(--iris);
+	border-radius: 4px;
+}
+
+.icon-benefit {
+	width: 64px;
+	height: 64px;
+}
+
+.icon-benefit-background {
+	width: 264px;
+	height: 112px;
+	background: var(--cloud);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.social-links-list {
+	display: flex;
+	justify-content: space-between;
+	gap: 24px;
+}
+
+.social-icon svg {
+	width: 16px;
+	height: 16px;
+}
+
+.social-icon {
+	width: 40px;
+	height: 40px;
+	background: var(--white);
+	border-radius: 50%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	transition: background-color, color var(--transition);
+}
+
+.social-icon:hover,
+.social-icon:active {
+	background: var(--iris);
+	border-radius: 50%;
+	color: var(--white);
+}
+
+.is-hidden {
+	visibility: hidden;
+	scale: 1.05;
+}
+
+.modal {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100vw;
+	height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background: var(--navy-blue-modal);
+	transition: transform var(--transition);
+}
+
+.modal-content {
+	position: relative;
+	background-color: var(--dairy);
+	border-radius: 4px;
+	box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.14), 0 1px 3px 0 rgba(0, 0, 0, 0.12), 0 1px 2px 0 rgba(0, 0, 0, 0.2);
+	padding: 24px;
+	width: 408px;
+	height: 584px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.close-btn {
+	/* sau puteam folosi float:right */
+	position: absolute;
+	top: 24px;
+	right: 24px;
+	border-radius: 50%;
+	width: 24px;
+	height: 24px;
+	color: var(--navy-blue);
+	background-color: var(--cornflower);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	outline: none;
+	border-style: none;
+	margin-bottom: 24px;
+}
+
+.modal-content h2 {
+	font-family: var(--font-family);
+	font-weight: 500;
+	font-size: 16px;
+	line-height: 1.5;
+	letter-spacing: 0.02em;
+	text-align: center;
+	color: var(--navy-blue);
+	margin-top: 48px;
+	margin-bottom: 16px;
+}
+
+label {
+	font-family: var(--font-family);
+	font-weight: 400;
+	font-size: 12px;
+	line-height: 1.17;
+	letter-spacing: 0.04em;
+	color: var(--light-slate);
+}
+
+.inputs {
+	display: flex;
+	flex-direction: column;
+	gap: 8px;
+}
+
+.input-class {
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	gap: 4px;
+	width: 360px;
+}
+
+.input-with-icon {
+	padding: 8px 16px;
+	border: 1px solid var(--iris);
+	border-radius: 4px;
+}
+
+.input-icon {
+	width: 18px;
+	height: 24px;
+	padding: 3px 0;
+	position: absolute;
+	top: 26px;
+	left: 16px;
+	pointer-events: none;
+}
+
+textarea {
+	height: 120px;
+	border: 1px solid var(--iris);
+	border-radius: 4px;
+	font-family: var(--font-family);
+	font-weight: 400;
+	font-size: 12px;
+	line-height: 1.17;
+	letter-spacing: 0.04em;
+	color: var(--navy-blue-modal);
+}
+
+.checkbox {
+	display: flex;
+	gap: 8px;
+	margin-bottom: 24px;
+}
+
+.checkbox input {
+	border-radius: 2px;
+	border: 1px solid var(--navy-blue-modal);
+}
+
+.checkbox label {
+	font-family: var(--font-family);
+	font-weight: 400;
+	font-size: 12px;
+	line-height: 1.17;
+	letter-spacing: 0.04em;
+	color: var(--light-slate);
+}
+
+.checkbox span {
+	line-height: 1.33;
+	text-decoration: underline;
+	text-decoration-skip-ink: none;
+	color: var(--iris);
+}
+
+.send-btn {
+	border-radius: 4px;
+	padding: 16px 32px;
+	width: 169px;
+	height: 56px;
+	box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.15);
+	background: var(--iris);
+	font-family: var(--font-family);
+	font-weight: 500;
+	font-size: 16px;
+	line-height: 1.5;
+	letter-spacing: 0.04em;
+	text-align: center;
+	color: var(--white);
+}
