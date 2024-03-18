@@ -273,7 +273,7 @@ label {
 }
 
 .input-with-icon {
-	padding: 8px 16px;
+	padding: 8px 16px 8px 32px;
 	border: 1px solid var(--navy-blue-modal);
 	border-radius: 4px;
 }
