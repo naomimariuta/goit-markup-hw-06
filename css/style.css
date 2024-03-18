@@ -184,7 +184,7 @@ li {
 	gap: 120px;
 }
 
-.footer-social-links {
+.footer-social {
 	font-weight: 500;
 	font-size: 16px;
 	line-height: 1.5;
@@ -201,16 +201,11 @@ li {
 	width: 208px;
 }
 
-.footer-icon svg {
+.footer-icon-svg {
 	width: 24px;
 	height: 24px;
 	color: var(--light-slate);
 	transition: color var(--transition);
-}
-
-.footer-icon svg:hover,
-.footer-icon svg:active {
-	color: var(--white);
 }
 
 .footer-icon {
@@ -224,8 +219,55 @@ li {
 	transition: background-color var(--transition);
 }
 
-.footer-icon:hover,
-.footer-icon:active {
+.footer-icon:hover {
 	background: var(--iris);
 	border-radius: 50%;
+}
+
+.footer-icon:hover > .footer-icon-svg {
+	color: var(--white);
+}
+
+.footer-subscribe {
+	display: flex;
+	gap: 24px;
+}
+
+.footer-email {
+	border: 1px solid var(--white);
+	border-radius: 4px;
+	width: 264px;
+	height: 40px;
+	box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.15);
+	font-family: var(--font-family);
+	font-weight: 400;
+	font-size: 12px;
+	line-height: 200%;
+	letter-spacing: 0.04em;
+	color: var(--white);
+	background: var(--navy-blue);
+}
+
+.footer-btn {
+	border-radius: 4px;
+	padding: 8px 24px;
+	width: 165px;
+	height: 40px;
+	background: var(--iris);
+	font-family: var(--font-family);
+	font-weight: 500;
+	font-size: 16px;
+	line-height: 150%;
+	letter-spacing: 0.04em;
+	text-align: left;
+	color: var(--white);
+	position: relative;
+}
+
+.footer-icon-email {
+	width: 24px;
+	height: 24px;
+	position: absolute;
+	top: 8px;
+	right: 24px;
 }

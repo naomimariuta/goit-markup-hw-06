@@ -173,7 +173,7 @@
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	transition: background-color, color var(--transition);
+	transition: background-color var(--transition), color var(--transition);
 }
 
 .social-icon:hover,
@@ -230,6 +230,11 @@
 	outline: none;
 	border-style: none;
 	margin-bottom: 24px;
+}
+
+.close-btn:hover {
+	color: var(--ocean);
+	background-color: var(--white);
 }
 
 .modal-content h2 {
@@ -307,7 +312,7 @@ textarea {
 	color: var(--navy-blue-modal);
 }
 
-.agree-check {
+.checkbox {
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -315,50 +320,30 @@ textarea {
 	margin-bottom: 24px;
 }
 
-.checkbox-icon {
+.checkbox .checkbox-input {
+	appearance: none;
+}
+
+.checkbox .icon-checkbox {
 	width: 16px;
 	height: 16px;
 	fill: none;
-	border: 1px solid var(--navy-blue-modal);
-	border-radius: 2px;
-	transition: border-color var(--transition), background-color var(--transition), fill var(--transition);
-}
-
-.agree-check {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	margin-bottom: 15px;
-}
-
-.agree-check .checkmark {
-	/* appearance: none; */
-}
-
-.agree-check .icon-check {
-	width: 16px;
-	height: 16px;
-	fill: none;
+	margin-right: 8px;
 	border: 2px solid var(--navy-blue-modal);
 	border-radius: 2px;
 	transition: border-color var(--transition), background-color var(--transition), fill var(--transition);
 }
 
-.agree-check .checkmark:focus + .icon-check,
-.agree-check .checkmark:checked:focus + .icon-check {
-	outline: 2px solid #212121;
-}
-
-.agree-check .checkmark:checked + .icon {
-	background-color: #2196f3;
-	border-color: #2196f3;
-	fill: #ffffff;
+.checkbox .checkbox-input:checked + .icon-checkbox {
+	background-color: var(--ocean);
+	border-color: var(--ocean);
+	fill: var(--white);
 	outline: none;
 	stroke: var(--white);
 	stroke-width: 0.2;
 }
 
-.agree-check label {
+.checkbox label {
 	flex: 2;
 	font-family: var(--font-family);
 	font-weight: 400;
@@ -368,7 +353,7 @@ textarea {
 	color: var(--light-slate);
 }
 
-.agree-check span {
+.checkbox span {
 	line-height: 1.33;
 	text-decoration: underline;
 	text-decoration-skip-ink: none;
