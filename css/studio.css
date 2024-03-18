@@ -269,7 +269,7 @@ label {
 
 .input-with-icon {
 	padding: 8px 16px;
-	border: 1px solid var(--iris);
+	border: 1px solid var(--navy-blue-modal);
 	border-radius: 4px;
 }
 
@@ -278,14 +278,26 @@ label {
 	height: 24px;
 	padding: 3px 0;
 	position: absolute;
-	top: 26px;
+	top: 22px;
 	left: 16px;
 	pointer-events: none;
 }
 
-textarea {
-	height: 120px;
+.input-with-icon:focus {
 	border: 1px solid var(--iris);
+	border-radius: 4px;
+	outline: none;
+}
+
+.input-with-icon:focus ~ .input-icon {
+	fill: var(--iris);
+	outline: none;
+}
+
+textarea {
+	padding: 8px 16px;
+	height: 120px;
+	border: 1px solid var(--navy-blue-modal);
 	border-radius: 4px;
 	font-family: var(--font-family);
 	font-weight: 400;
@@ -295,18 +307,59 @@ textarea {
 	color: var(--navy-blue-modal);
 }
 
-.checkbox {
+.agree-check {
 	display: flex;
+	justify-content: center;
+	align-items: center;
 	gap: 8px;
 	margin-bottom: 24px;
 }
 
-.checkbox input {
-	border-radius: 2px;
+.checkbox-icon {
+	width: 16px;
+	height: 16px;
+	fill: none;
 	border: 1px solid var(--navy-blue-modal);
+	border-radius: 2px;
+	transition: border-color var(--transition), background-color var(--transition), fill var(--transition);
 }
 
-.checkbox label {
+.agree-check {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-bottom: 15px;
+}
+
+.agree-check .checkmark {
+	/* appearance: none; */
+}
+
+.agree-check .icon-check {
+	width: 16px;
+	height: 16px;
+	fill: none;
+	border: 2px solid var(--navy-blue-modal);
+	border-radius: 2px;
+	transition: border-color var(--transition), background-color var(--transition), fill var(--transition);
+}
+
+.agree-check .checkmark:focus + .icon-check,
+.agree-check .checkmark:checked:focus + .icon-check {
+	outline: 2px solid #212121;
+}
+
+.agree-check .checkmark:checked + .icon {
+	background-color: #2196f3;
+	border-color: #2196f3;
+	fill: #ffffff;
+	outline: none;
+	stroke: var(--white);
+	stroke-width: 0.2;
+}
+
+.agree-check label {
+	flex: 2;
 	font-family: var(--font-family);
 	font-weight: 400;
 	font-size: 12px;
@@ -315,7 +368,7 @@ textarea {
 	color: var(--light-slate);
 }
 
-.checkbox span {
+.agree-check span {
 	line-height: 1.33;
 	text-decoration: underline;
 	text-decoration-skip-ink: none;
@@ -323,6 +376,7 @@ textarea {
 }
 
 .send-btn {
+	align-self: center;
 	border-radius: 4px;
 	padding: 16px 32px;
 	width: 169px;

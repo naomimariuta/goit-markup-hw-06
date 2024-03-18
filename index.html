@@ -119,55 +119,74 @@
 						</button>
 						<h2>Leave your contacts and we will call you back</h2>
 
-						<div class="inputs">
-							<div class="input-class">
-								<label for="name">Name</label>
+						<form class="inputs">
+							<label
+								for="name"
+								class="input-class"
+								>Name
 								<input
 									type="text"
+									name="name"
 									class="input-with-icon"
 								/>
 								<svg class="input-icon">
-									<use xlink:href="./images/modal.svg#icon-name"></use>
+									<use xlink:href="./images/icons.svg#icon-name"></use>
 								</svg>
-							</div>
+							</label>
 
-							<div class="input-class">
-								<label for="phone">Phone</label>
+							<label
+								for="phone"
+								class="input-class"
+								>Phone
 								<input
 									type="tel"
+									name="telephone"
 									class="input-with-icon"
 								/>
 								<svg class="input-icon">
-									<use xlink:href="./images/modal.svg#icon-phone"></use>
+									<use xlink:href="./images/icons.svg#icon-phone"></use>
 								</svg>
-							</div>
+							</label>
 
-							<div class="input-class">
-								<label for="email">Email</label>
+							<label
+								for="email"
+								class="input-class"
+								>Email
 								<input
 									type="email"
+									name="email"
 									class="input-with-icon"
 								/>
 								<svg class="input-icon">
-									<use xlink:href="./images/modal.svg#icon-email"></use>
+									<use xlink:href="./images/icons.svg#icon-email"></use>
 								</svg>
-							</div>
+							</label>
 
-							<div class="input-class">
-								<label for="comments">Comments</label>
+							<label
+								for="comments"
+								class="input-class"
+								>Comments
 								<textarea placeholder="Text input"></textarea>
-							</div>
-							<div class="checkbox">
-								<input type="checkbox" />
-								<label for="terms">I accept the terms and conditions of the <span>Privacy Policy</span></label>
-							</div>
-						</div>
-						<button
-							type="button"
-							class="send-btn"
-						>
-							Send
-						</button>
+							</label>
+
+							<label class="agree-check">
+								<svg class="icon-check">
+									<use xlink:href="./images/icons.svg#icon-checkbox"></use>
+								</svg>
+								<input
+									type="checkbox"
+									name="checkbox"
+									class="checkmark"
+								/>I accept the terms and conditions of the <span>Privacy Policy</span>
+							</label>
+
+							<button
+								type="submit"
+								class="send-btn"
+							>
+								Send
+							</button>
+						</form>
 					</div>
 				</div>
 			</section>
